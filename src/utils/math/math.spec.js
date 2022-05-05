@@ -18,8 +18,8 @@ describe( 'divide()', () => {
     } );
 
     // division by 0 should return null
-    test( 'divide(4,0) to be null', () => {
-        expect( divide(4, 0) ).toBeNull();
+    test( 'divide(4,0) to throw error', () => {
+        expect(()=>divide(4, 0)).toThrow("Division by 0!");
     } );
 } );
 

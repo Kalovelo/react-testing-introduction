@@ -5,7 +5,10 @@ export const add = function( a, b ) {
 
 // division two numbers
 export const divide = function( a, b ) {
-  return b === 0 ? null : a / b;
+  if ( b === 0 ) {
+    throw new Error( "Division by 0!" );
+  }
+  return a / b;
 }
 
 // multiply two numbers
